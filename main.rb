@@ -12,12 +12,12 @@ def play_game
 end
 
 def repeat_game
-  puts "Would you like to play a new game? Press 'y' for yes or 'n' for no."
+  puts "Você gostaria de jogar um novo jogo? Pressione 's' para sim ou 'n' para não."
   repeat_input = gets.chomp.downcase
-  if repeat_input == 'y'
+  if repeat_input == 's'
     play_game
   else
-    puts 'Thanks for playing!'
+    puts 'Obrigado por Jogar!'
   end
 end
 
