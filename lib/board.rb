@@ -4,7 +4,7 @@
 class Board
   attr_reader :cells
 
-  WINNING_COMBOS = [
+  COMBO_VENCEDOR = [
     [0, 1, 2], [3, 4, 5], [6, 7, 8], [0, 3, 6],
     [1, 4, 7], [2, 5, 8], [0, 4, 8], [2, 4, 6]
   ].freeze
@@ -15,7 +15,7 @@ class Board
 
   # rubocop:disable Metrics/AbcSize
   def show
-    puts <<-HEREDOC
+    puts <<-DOCUMENTOS
 
        #{cells[0]} | #{cells[1]} | #{cells[2]}
       ---+---+---
@@ -23,7 +23,7 @@ class Board
       ---+---+---
        #{cells[6]} | #{cells[7]} | #{cells[8]}
 
-    HEREDOC
+    DOCUMENTOS
   end
   # rubocop:enable Metrics/AbcSize
 
@@ -40,7 +40,7 @@ class Board
   end
 
   def game_over?
-    WINNING_COMBOS.any? do |combo|
+    COMBO_VENCEDOR.any? do |combo|
       [cells[combo[0]], cells[combo[1]], cells[combo[2]]].uniq.length == 1
     end
   end
