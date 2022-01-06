@@ -12,7 +12,7 @@ def play_game
 end
 
 def repeat_game
-  puts "Você gostaria de jogar um novo jogo? Pressione 's' para sim ou 'n' para não."
+  puts "Você gostaria de jogar novamente, um novo jogo? Pressione 's' para sim ou 'n' para não."
   repeat_input = gets.chomp.downcase
   if repeat_input == 's'
     play_game
